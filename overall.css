@@ -1,0 +1,45 @@
+/*NAVBAR START*/
+nav {
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 9999999999;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+nav img {
+    height: 12vh;
+    width: auto;
+}
+
+/*NAVBAR END*/
+
+
+/*MAIN TEXT BODY */
+.main {
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+}
