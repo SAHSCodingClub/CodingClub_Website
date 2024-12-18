@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Trykker&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Trykker", serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 20%;
+    background-color: white;
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #007bff;
+}
+
+.title {
+    padding: 3% 0;
+    margin: 0 20%;
+    font-size: 1.5rem;
+
+    text-align: center;
+    text-indent: 2em;
+    line-height: 1.5;
+}
+
+.text {
+    margin: 0 20%;
+    font-size: 1.2rem;
+
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #007bff;
+}
+
+/* Title div styling */
+#title {
+    flex: 1; /* Takes up half the space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+    align-items: flex-start; /* Horizontally centers the content */
+    margin-top: 2%;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't affect layout */
+}
+
+#home p {
+    text-indent: 0 !important;
+}
+
+
+
+
+/* General styling for the list */
+.link-list {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    width: 100%; /* Ensures it spans full width */
+}
+
+/* Styling for individual list items */
+.link-list li {
+    margin: 5px 0; /* Adds space between links */
+}
+
+/* Styling for the links */
+.link-list a {
+    display: block; /* Makes the link clickable over the whole row */
+    text-decoration: none; /* Removes underline */
+    color: #007bff; /* Sets link color */
+    font-size: 1rem; /* Adjusts font size */
+    padding: 10px 15px; /* Adds padding for better clickability */
+    border: 1px solid #ddd; /* Adds a light border around links */
+    border-radius: 5px; /* Rounds the edges of the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+
+    margin-bottom: 10px;
+}
+
+/* Hover effect for the links */
+.link-list a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    color: #0056b3; /* Darker link color on hover */
+    cursor: pointer;
+}
+
+/* Active or focused link styling */
+.link-list a:focus, .link-list a:active {
+    background-color: #e9ecef; /* Slightly darker background for active state */
+    color: #004085; /* Even darker text */
+    outline: none; /* Removes default outline */
+}
+
+.hljs {
+    color: #24292e;
+    background: #f6f6f6 !important;
+}

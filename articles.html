@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/cpp.min.js"></script>
+    <title>Adam Jacuch</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+
+    <!-- Use MathJax v3 -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Load Marked.js (for parsing Markdown) -->
+    <script src="markdown.js"></script>
+
+    <!-- Load your custom script after MathJax and Marked.js -->
+    <script defer type="text/javascript" src="script4.js"></script>
+</head>
+      
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="articles.html">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div id="home" class="text">
+    <div id="title">
+        <h1>Coding Club</h1>
+        <h2>Articles</h2>
+    </div>
+    <p>
+      Here you can find atricles written by our members!
+    </p>
+    <ul class="link-list">
+      <a href="javascript:void(0);" onclick="loadMarkdown('articles/MLPs.md');">Analysis of multilayer perceptrons | Adam Jacuch</a>
+      <a href="javascript:void(0);" onclick="loadMarkdown('articles/MLPs.md');">Analysis of multilayer perceptrons | Adam Jacuch</a>
+      <a href="javascript:void(0);" onclick="loadMarkdown('articles/MLPs.md');">Analysis of multilayer perceptrons | Adam Jacuch</a>
+      <a href="javascript:void(0);" onclick="loadMarkdown('articles/MLPs.md');">Analysis of multilayer perceptrons | Adam Jacuch</a>
+    </ul>
+  </div>
+  <div id="article-content" class="text"></div>
+</body>
+</html>
