@@ -13,7 +13,7 @@ All statistics were gathered from a ROBLOX variation of plinko. I do not support
 Plinko is a casino game in where you drop a ball and it bounces its way down until it ends up in a slot. Based on the slot in which it lands you earn a different percentage of your money back.
 
 <p align="center">
-  <img src="../images/plinko.png" alt="image of a ROBLOX plinko board">
+  <img src="https://ibb.co/WzxkQLD" alt="image of a ROBLOX plinko board">
 </p>
 
 While playing plinko you are always guarenteed to get some money back, even if it is only 20% of what you originally bet. For example if you bet $100 and the ball lands in the 0.2 zone you would still be left with $20.
