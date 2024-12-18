@@ -20,7 +20,7 @@ While playing plinko you are always guarenteed to get some money back, even if i
 
 ## Bet Sizes
 
-When playing plinko professionally you always want to keep balls rolling down the board. In order to do this you always want to be betting 1/30th of your current balance. For example if you have $30,000 you should be betting $1,000. It should remain like this until you get $60,000 where you can start betting $20,000.
+When playing plinko professionally you always want to keep balls rolling down the board. In order to do this you always want to be betting 1/30th of your current balance. For example if you have $30,000 you should be betting $1,000. It should remain like this until you get $300,000 where you can start betting $10,000.
 
 ## Auto Clicker
 
