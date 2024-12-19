@@ -1,4 +1,4 @@
-<div style="text-align: center; font-weight: 700; font-size: 3rem;">
+<div class="heading" style="text-align: center; font-weight: 700; font-size: 3rem;">
 Casino Plinko Strategy
 </div>
 

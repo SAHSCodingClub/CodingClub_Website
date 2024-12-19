@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Trykker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 body {
     margin: 0;
@@ -58,13 +59,17 @@ h1 {
     margin-top: 2%;
     padding: 20px;
     box-sizing: border-box; /* Ensures padding doesn't affect layout */
+
+    font-family: 'Fugaz One' !important;
 }
 
 #home p {
     text-indent: 0 !important;
 }
 
-
+.heading {
+    font-family: 'Fugaz One' !important;
+}
 
 
 /* General styling for the list */
@@ -111,4 +116,6 @@ h1 {
 .hljs {
     color: #24292e;
     background: #f6f6f6 !important;
+
+    text-indent: 0 !important;
 }
