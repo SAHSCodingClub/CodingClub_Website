@@ -1,5 +1,5 @@
 <div class="heading" style="text-align: center; font-weight: 700; font-size: 3rem;">
-Casino Plinko Strategy
+ROBLOX Plinko Strategy
 </div>
 
 *By Logan Rembisz | December 18, 2024*
