@@ -196,3 +196,107 @@ vector<double> NN::forwardPass(const vector<double>& input) {
     return neurons.back();
 }
 ```
+
+Next, I implement the backward pass. The following code differs slightly from what was previously stated due to mathematical optimizations. To start, the function calculates the deltas of the neurons (essentially it assigns blame; neurons that contribute more to loss have higher magnitude deltas). It is important to note that deltas do not represent how a neurons value should be changed to set loss to zero—rather, it represents the partial derivative of the neuron with respect to loss. When storing weight gradients, the biases are simply the deltas as they directly affect how a neuron fires. However, because connection weights are a function of the neurons value
+
+$$ neuron \times weight $$
+
+it is necessary that we multiply the delta by its respective neuron value when calculating connection gradients. Once the gradient is calculated it is added to a gradient pool (one gradient that stores the sum of all caluclated gradients), where it will later be used to update the MLPs weights.
+
+
+```cpp
+void NN::backwardPass(const vector<double>& expectedOutput) {
+    [[unlikely]] if (expectedOutput.size() != neurons.back().size()) {
+        throw runtime_error("Expected output size does not match output layer size.");
+    }
+
+    vector<vector<double>> deltas(networkSize);
+
+    // Compute output layer error
+    vector<double>& outputLayer = neurons.back();
+    deltas[networkSize - 1] = vector<double>(outputLayer.size());
+    for (size_t i = 0; i < outputLayer.size(); i++) {
+        double error = outputLayer[i] - expectedOutput[i];
+        deltas[networkSize - 1][i] = error;
+    }
+
+    // Backpropagate through hidden layers
+    for (int i = networkSize - 2; i > 0; i--) {
+        deltas[i] = vector<double>(neurons[i].size());
+        for (size_t j = 0; j < neurons[i].size(); j++) {
+            double sum = 0.0;
+            for (size_t k = 0; k < neurons[i + 1].size(); k++) {
+                sum += deltas[i + 1][k] * weights.connections[i][j][k];
+            }
+            deltas[i][j] = sum * sigmoidDerivative(neurons[i][j]);
+        }
+    }
+
+    // Accumulate updates
+    for (int i = 0; i < networkSize - 1; i++) {
+        for (size_t j = 0; j < neurons[i].size(); j++) {
+            for (size_t k = 0; k < neurons[i + 1].size(); k++) {
+                updates.connections[i][j][k] += deltas[i + 1][k] * neurons[i][j];
+            }
+        }
+        if (i < networkSize - 2) {
+            for (size_t j = 0; j < neurons[i + 1].size(); j++) {
+                updates.biases[i][j] += deltas[i + 1][j];
+            }
+        }
+    }
+
+    batchSize++;
+}
+```
+
+Next, I implement the update function. This is resposible for updating the MLPs parameters using the stored gradients from the backward passes. It also clears the gradient pool after so that future gradients are not biased by outdated ones.
+
+```cpp
+void NN::update(double learningRate) {
+    for (int i = 0; i < networkSize - 1; i++) {
+        for (size_t j = 0; j < neurons[i].size(); j++) {
+            for (size_t k = 0; k < neurons[i + 1].size(); k++) {
+                weights.connections[i][j][k] -= learningRate * (updates.connections[i][j][k] / batchSize);
+                updates.connections[i][j][k] = 0.0;
+            }
+        }
+        if (i < networkSize - 2) {
+            for (size_t j = 0; j < neurons[i + 1].size(); j++) {
+                weights.biases[i][j] -= learningRate * (updates.biases[i][j] / batchSize);
+                updates.biases[i][j] = 0.0;
+            }
+        }
+    }
+
+    batchSize = 0;
+}
+```
+
+Now that I wrote the MLP, it is time to write code that runs one. Essentially, I call the functions above recursivley, repeating forward and backward passes until the loss is acceptably low. The code below is very basic and does not utilize the full power of batch stochastic gradient descent, as I immediately update weights after each forward and backward pass. Furthermore, the example below only uses one peice of data.
+
+```cpp
+int main() {
+    int networkSize[] = {3, 5, 2};
+    NN nn;
+    nn.init(networkSize, 3);
+
+    vector<double> input = {0.5, 0.8, 0.2};
+
+    for (int i = 0; i < 1000; i++) {
+        vector<double> output = nn.forwardPass(input);
+        if (i % 100 == 0) nn.printResult(output);
+        nn.backwardPass({1, 0});
+        nn.clear(networkSize);
+        nn.update(0.01);
+    }
+
+    return 0;
+}
+```
+
+In order to train in batches, simply limit the amount of times update is called. For example, call it after every ten forward and backward passes. In order to train the model on a large number of data, it would be wise to implement some sort of csv reading/store the data in a separate file for readability. I have not done this in order to make the code as simple and readable as possible, and also because that is not the main focus of this article.
+
+## Conclusion
+
+In summary, MLPs are very powerful tools for developing AI. This article covered the math behind them and also a basic implementation of one. By understanding the fundamental principles and coding an MLP from scratch, you gain deeper insights into how neural networks function and their potential applications. With this knowledge, you are better equipped to explore more advanced architectures and tackle complex AI challenges.

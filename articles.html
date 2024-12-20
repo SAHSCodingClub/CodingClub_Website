@@ -26,9 +26,9 @@
 <body>
   <nav class="navbar">
     <a href="index.html">Home</a>
-    <a href="#about">About</a>
+    <a href="about.html">About</a>
     <a href="articles.html">Articles</a>
-    <a href="#contact">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
   <div id="home" class="text">
     <div id="title">
@@ -38,12 +38,44 @@
     <p>
       Here you can find atricles written by our members!
     </p>
+    
+    
     <ul class="link-list">
-      <a href="javascript:void(0);" onclick="loadMarkdown('articles/HumanBenchmark.md');">Beating Human Benchmark with Python Automation | Erlis Hoxha | December 2024</a>
-      <a href="javascript:void(0);" onclick="loadMarkdown('articles/MLPs.md');">Analysis of multilayer perceptrons | Adam Jacuch | December 2024</a>
-      <a href="javascript:void(0);" onclick="loadMarkdown('articles/Plinko.md');">ROBLOX Plinko Strategy | Logan Rembisz | December 2024</a>
-      </ul>
+      <li>
+          <a href="javascript:void(0);" onclick="loadMarkdown('articles/HumanBenchmark.md');">
+              <div class="card">
+                  <h3>Beating Human Benchmark with Python Automation</h3>
+                  <p><strong>Author:</strong> Erlis Hoxha</p>
+                  <p><strong>Date:</strong> December 2024</p>
+                  <p class="description">Explore how Python automation can be used to beat popular human benchmark challenges.</p>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="javascript:void(0);" onclick="loadMarkdown('articles/MLPs.md');">
+              <div class="card">
+                  <h3>Analysis of Multilayer Perceptrons</h3>
+                  <p><strong>Author:</strong> Adam Jacuch</p>
+                  <p><strong>Date:</strong> December 2024</p>
+                  <p class="description">An in-depth look at the design, training, and performance of multilayer perceptrons in machine learning.</p>
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="javascript:void(0);" onclick="loadMarkdown('articles/Plinko.md');">
+              <div class="card">
+                  <h3>ROBLOX Plinko Strategy</h3>
+                  <p><strong>Author:</strong> Logan Rembisz</p>
+                  <p><strong>Date:</strong> December 2024</p>
+                  <p class="description">Learn strategies to maximize success in ROBLOX Plinko games.</p>
+              </div>
+          </a>
+      </li>
+  </ul>
+
+
   </div>
   <div id="article-content" class="text"></div>
+  <h4 class="watermark">2024 SAHS Coding Club</h4>
 </body>
 </html>

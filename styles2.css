@@ -71,47 +71,71 @@ h1 {
     font-family: 'Fugaz One' !important;
 }
 
+.watermark {
+    margin-top: 8vh;
+
+    text-align: center;
+    font-weight: 200;
+    color: #6c757d;
+}
+
 
 /* General styling for the list */
 .link-list {
     list-style-type: none; /* Removes default bullets */
     padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    width: 100%; /* Ensures it spans full width */
+    margin: 0 auto; /* Centers the list */
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+    gap: 20px; /* Adds space between grid items */
+    width: 100%; /* Ensures full-width layout */
 }
 
 /* Styling for individual list items */
 .link-list li {
-    margin: 5px 0; /* Adds space between links */
+    margin: 0; /* No additional margin for list items */
 }
 
 /* Styling for the links */
 .link-list a {
-    display: block; /* Makes the link clickable over the whole row */
     text-decoration: none; /* Removes underline */
-    color: #007bff; /* Sets link color */
-    font-size: 1rem; /* Adjusts font size */
-    padding: 10px 15px; /* Adds padding for better clickability */
-    border: 1px solid #ddd; /* Adds a light border around links */
-    border-radius: 5px; /* Rounds the edges of the links */
-    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
-
-    margin-bottom: 10px;
+    color: inherit; /* Inherits color for better readability */
 }
 
-/* Hover effect for the links */
-.link-list a:hover {
-    background-color: #f0f0f0; /* Light gray background on hover */
-    color: #0056b3; /* Darker link color on hover */
-    cursor: pointer;
+/* Styling for the card */
+.card {
+    display: flex;
+    flex-direction: column;
+    text-indent: 0 !important;
+    text-align: start !important;
+    padding: 20px; /* Adds padding inside the card */
+    border: 1px solid #ddd; /* Adds a border around the card */
+    border-radius: 8px; /* Rounds the corners of the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #fff; /* Ensures a white background */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
-/* Active or focused link styling */
-.link-list a:focus, .link-list a:active {
-    background-color: #e9ecef; /* Slightly darker background for active state */
-    color: #004085; /* Even darker text */
-    outline: none; /* Removes default outline */
+/* Styling for the card hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
 }
+
+/* Styling for the card title */
+.card h3 {
+    font-size: 1.2rem; /* Adjust title size */
+    margin: 0 0 10px; /* Space below the title */
+    color: #007bff; /* Link color */
+}
+
+/* Styling for the description */
+.card .description {
+    font-size: 0.9rem; /* Slightly smaller text for the description */
+    color: #6c757d; /* Gray text for description */
+    margin-top: 10px; /* Space above description */
+}
+
 
 .hljs {
     color: #24292e;
