@@ -61,7 +61,7 @@ Atfer enough forward and backward passes, the loss should become acceptably low,
 
 ## Deployment
 
-Assuming that the test score is acceptably high, you can begin depolying your model to real world tasks. When running your trained model, you no longer use the backwards pass, as there is no labeld output for the model to asses itself on.
+Assuming that the test score is acceptably high, you can begin depolying your model to real world tasks. When running your trained model, you no longer use the backwards pass, as there is no labeled output for the model to asses itself on.
 
 ## Implementation
 
