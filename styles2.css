@@ -48,9 +48,11 @@ body {
 h1 {
     color: #007bff;
     font-size: 4em;
+    margin: 0 6%;
 }
 #home h2 {
     font-size: 3em;
+    margin: 0 6%;
 }
 .info {
     padding-bottom: 4vh;
@@ -63,8 +65,7 @@ h1 {
     flex-direction: column;
     justify-content: center; /* Vertically centers the content */
     align-items: flex-start; /* Horizontally centers the content */
-    margin-top: 2%;
-    padding: 20px;
+    padding: 10% 20px;
     box-sizing: border-box; /* Ensures padding doesn't affect layout */
 
     /*font-family: 'Fugaz One' !important;*/
