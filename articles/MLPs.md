@@ -35,7 +35,7 @@ $$ \sum_{n=0}^s a(value + bias) $$
 
 ## Backward Pass
 
-Once the data reaches the output layer it would idealy contain some logical interpretation of the data. However, a randomly initalized MLP will return random values. This is where the backward pass comes into place. The purpose of the backward pass is to adjust the models weights in a way that minimizes loss, or the difference between what the AI predicts and the expected output. The expected output is user-defined, and should be present in the data that you feed the network. The loss function is typically a very high dimensional function (the exact number depends of the number of weights in a model). If a model has five weights the loss function will look like:
+Once the data reaches the output layer it would ideally contain some logical interpretation of the data. However, a randomly initalized MLP will return random values. This is where the backward pass comes into place. The purpose of the backward pass is to adjust the models weights in a way that minimizes loss, or the difference between what the AI predicts and the expected output. The expected output is user-defined, and should be present in the data that you feed the network. The loss function is typically a very high dimensional function (the exact number depends of the number of weights in a model). If a model has five weights the loss function will look like:
 
 $$ l(a, b, c, d, e) $$
 
