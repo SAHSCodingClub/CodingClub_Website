@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Trykker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     margin: 0;
@@ -47,6 +47,13 @@ body {
 
 h1 {
     color: #007bff;
+    font-size: 4em;
+}
+#home h2 {
+    font-size: 3em;
+}
+.info {
+    padding-bottom: 4vh;
 }
 
 /* Title div styling */
@@ -60,7 +67,9 @@ h1 {
     padding: 20px;
     box-sizing: border-box; /* Ensures padding doesn't affect layout */
 
-    font-family: 'Fugaz One' !important;
+    /*font-family: 'Fugaz One' !important;*/
+    font-family: "Poppins", serif !important;
+    font-weight: 900;
 }
 
 #home p {
@@ -68,7 +77,9 @@ h1 {
 }
 
 .heading {
-    font-family: 'Fugaz One' !important;
+    /*font-family: 'Fugaz One' !important;*/
+    font-family: "Poppins", serif !important;
+    padding: 6vh 0 !important;
 }
 
 .watermark {
