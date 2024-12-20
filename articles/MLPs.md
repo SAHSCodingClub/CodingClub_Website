@@ -39,7 +39,7 @@ Once the data reaches the output layer it would ideally contain some logical int
 
 $$ l(a, b, c, d, e) $$
 
-to minimize the loss, the caluate the partial derivatives of a change in a weight with respect to change in loss
+to minimize the loss, calculate the partial derivatives of a change in a weight with respect to change in loss
 
 $$ \frac{\partial w}{\partial l} $$
 
