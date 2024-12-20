@@ -25,7 +25,7 @@ Where s represents the previous layer size. You can simplify this further to:
 
 $$ \vec{neurons} \cdot \vec{weights} $$
 
-In hidden layers, once this operation is complete a bias (this is learnable by the MLP) is added and an activation function is applied. Biases allow the MLP to shift the activation function and better capture complex patterns in data. Similarly, activation functions introduce non-linearity into the network, enhasing the power of biases. Common examples of activation functions include sigmoid, hyperbolic tangent, and rectified linear units.
+In hidden layers, once this operation is complete a bias (this is learnable by the MLP) is added and an activation function is applied. Biases allow the MLP to shift the activation function and better capture complex patterns in data. Similarly, activation functions introduce non-linearity into the network, enhansing the power of biases. Common examples of activation functions include sigmoid, hyperbolic tangent, and rectified linear units.
 
 <img src="./images/ActivationFunctions.jpg" alt="Activation Functions" style="width: 60vw; height: auto;"/>
 
