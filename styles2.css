@@ -21,9 +21,11 @@ body {
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s;
+    transition: transform 0.3s;
 }
-.navbar a:hover {
+.navbar a:hover, .exit:hover {
     color: #007bff;
+    transform: translateY(-2px);
 }
 
 .title {
@@ -49,13 +51,21 @@ h1 {
     color: #007bff;
     font-size: 4em;
     margin: 0 6%;
+
+    animation: fadeInRight 0.5s ease-out forwards;
 }
 #home h2 {
     font-size: 3em;
     margin: 0 6%;
+
+    opacity: 0;
+    animation: fadeInLeft 0.5s ease-out 0.1s forwards;
 }
 .info {
     padding-bottom: 4vh;
+
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out 0.2s forwards;
 }
 
 /* Title div styling */
@@ -101,6 +111,36 @@ h1 {
     grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
     gap: 20px; /* Adds space between grid items */
     width: 100%; /* Ensures full-width layout */
+
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.5s forwards;
+}
+
+.exit {
+    font-family: "Trykker", serif;
+
+    display: none;
+
+    margin: 0;
+    cursor: pointer;
+
+    border-style: none;
+    background-color: transparent;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.5s forwards;
+
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 1rem;
+    transition: color 0.3s;
+    transition: transform 0.3s;
 }
 
 /* Styling for individual list items */
@@ -154,4 +194,48 @@ h1 {
     background: #f6f6f6 !important;
 
     text-indent: 0 !important;
+}
+
+
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

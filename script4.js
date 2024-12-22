@@ -1,5 +1,6 @@
 async function loadMarkdown(filename) {
     document.getElementById("home").style.display = "none";
+    document.querySelector(".exit").style.display = "block";
 
     try {
         const response = await fetch(filename);
