@@ -186,6 +186,7 @@ h1 {
     font-size: 0.9rem; /* Slightly smaller text for the description */
     color: #6c757d; /* Gray text for description */
     margin-top: 10px; /* Space above description */
+    margin-bottom: 2px;
 }
 
 
