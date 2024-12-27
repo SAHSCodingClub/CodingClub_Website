@@ -65,7 +65,7 @@ Assuming that the test score is acceptably high, you can begin depolying your mo
 
 ## Implementation
 
-Now that you are familiar with MLPs, it is time to write one. The idea is that this should help clarify any confusion from the above text, and give you a lower level look into how such models work. To begin, we define a neural network class that inherits a weight class (this is so the weight class can double for the gradients too). The following code is in c++:
+Now that you are familiar with MLPs, it is time to write one. The idea is that this should help clarify any confusion from the above text, and give you a lower level look into how such models work. To begin, we define a neural network class that inherits a weight struct (this is so the weight struct can double for the gradients too). The following code is in c++:
 
 ```cpp
 #include <iostream>
@@ -78,9 +78,7 @@ using std::vector;
 using std::runtime_error;
 using std::endl;
 
-class Weights {
-
-public:
+struct Weights {
     vector<vector<vector<double>>> connections;
     vector<vector<double>> biases;
 };
